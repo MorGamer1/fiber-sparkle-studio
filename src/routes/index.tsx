@@ -6,6 +6,12 @@ import autoImg from "@/assets/service-auto.jpg";
 import laserImg from "@/assets/service-laser.jpg";
 import cncImg from "@/assets/service-cnc.jpg";
 import fibraImg from "@/assets/service-fibra.jpg";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -92,6 +98,7 @@ function Home() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#servicos" className="hover:text-foreground transition">Serviços</a>
             <a href="#processo" className="hover:text-foreground transition">Processo</a>
+            <a href="#portfolio" className="hover:text-foreground transition">Portfólio</a>
             <a href="#sobre" className="hover:text-foreground transition">Sobre</a>
             <a href="#contacto" className="hover:text-foreground transition">Contacto</a>
           </nav>
@@ -203,6 +210,47 @@ function Home() {
                 <h3 className="font-semibold text-lg mb-2">{t}</h3>
                 <p className="text-sm text-muted-foreground">{d}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio */}
+      <section id="portfolio" className="py-24 border-t border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex items-end justify-between mb-12 flex-wrap gap-6">
+            <div>
+              <p className="text-sm uppercase tracking-widest text-primary mb-3">Portfólio</p>
+              <h2 className="text-4xl md:text-5xl font-bold max-w-2xl">Peças que saíram da nossa oficina.</h2>
+            </div>
+            <p className="text-muted-foreground max-w-md">
+              Uma seleção de trabalhos recentes — do protótipo único à pequena série, com clientes em Portugal, Espanha e França.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+            {[
+              { img: portfolio1, title: "Capô em fibra de carbono", cat: "Automóvel", span: "md:row-span-2 md:col-span-2 aspect-square md:aspect-auto" },
+              { img: portfolio2, title: "Molde de casco náutico", cat: "Fibra de Vidro", span: "aspect-square" },
+              { img: portfolio3, title: "Painel decorativo laser", cat: "Corte Laser", span: "aspect-square" },
+              { img: portfolio4, title: "Suporte CNC em alumínio", cat: "Maquinação CNC", span: "aspect-square" },
+              { img: portfolio5, title: "Para-choques clássico", cat: "Reparação Auto", span: "aspect-square" },
+              { img: portfolio6, title: "Spoiler personalizado", cat: "Fibra de Vidro", span: "aspect-square md:col-span-2" },
+            ].map((p) => (
+              <figure key={p.title} className={`group relative overflow-hidden rounded-2xl border border-border bg-card ${p.span}`}>
+                <img
+                  src={p.img}
+                  alt={p.title}
+                  loading="lazy"
+                  width={1024}
+                  height={1024}
+                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition">
+                  <span className="text-xs uppercase tracking-widest text-primary">{p.cat}</span>
+                  <h3 className="font-display font-semibold text-lg mt-1">{p.title}</h3>
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>
