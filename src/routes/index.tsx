@@ -10,15 +10,39 @@ import fibraImg from "@/assets/service-fibra.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FibraForge — Fibra de Vidro, Laser, CNC e Reparação Automóvel" },
+      { title: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
       { name: "description", content: "Oficina especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel. Peças à medida, acabamento premium." },
       { property: "og:title", content: "FibraForge — Engenharia em Fibra de Vidro" },
       { property: "og:description", content: "Peças à medida, reparações invisíveis e produção de precisão." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
     ],
     links: [
+      { rel: "canonical", href: "/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "FibraForge",
+          description: "Oficina de fibra de vidro, corte laser, maquinação CNC e reparação automóvel.",
+          telephone: "+351 912 345 678",
+          email: "geral@fibraforge.pt",
+          address: { "@type": "PostalAddress", addressLocality: "Leiria", addressCountry: "PT" },
+          areaServed: "PT",
+          makesOffer: [
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Reparação Automóvel em Fibra" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corte Laser" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Maquinação CNC" } },
+            { "@type": "Offer", itemOffered: { "@type": "Service", name: "Fibra de Vidro — Laminação e Infusão" } },
+          ],
+        }),
+      },
     ],
   }),
   component: Home,

@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
+      { name: "description", content: "Oficina em Leiria especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel." },
+      { name: "author", content: "FibraForge" },
+      { property: "og:title", content: "FibraForge — Engenharia em Compósitos" },
+      { property: "og:description", content: "Peças à medida em fibra de vidro, corte laser e CNC. Reparações automóvel invisíveis." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "FibraForge" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       {
