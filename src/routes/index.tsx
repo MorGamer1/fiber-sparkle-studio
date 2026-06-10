@@ -98,6 +98,7 @@ function Home() {
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#servicos" className="hover:text-foreground transition">Serviços</a>
             <a href="#processo" className="hover:text-foreground transition">Processo</a>
+            <a href="#portfolio" className="hover:text-foreground transition">Portfólio</a>
             <a href="#sobre" className="hover:text-foreground transition">Sobre</a>
             <a href="#contacto" className="hover:text-foreground transition">Contacto</a>
           </nav>
