@@ -80,11 +80,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
       { name: "description", content: "Oficina em Leiria especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel." },
       { name: "author", content: "FibraForge" },
-      { property: "og:title", content: "FibraForge — Engenharia em Compósitos" },
-      { property: "og:description", content: "Peças à medida em fibra de vidro, corte laser e CNC. Reparações automóvel invisíveis." },
+      { property: "og:title", content: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
+      { property: "og:description", content: "Oficina em Leiria especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "FibraForge" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
+      { name: "twitter:description", content: "Oficina em Leiria especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b7387cd-c58c-410d-aab1-79e825a81294/id-preview-d28324cf--93055223-ead1-4f28-af59-c2bc5a6c7173.lovable.app-1781117133588.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/1b7387cd-c58c-410d-aab1-79e825a81294/id-preview-d28324cf--93055223-ead1-4f28-af59-c2bc5a6c7173.lovable.app-1781117133588.png" },
     ],
     links: [
       {
