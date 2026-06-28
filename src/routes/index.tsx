@@ -93,7 +93,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 font-display font-bold text-lg">
             <span className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-ember-glow grid place-items-center text-primary-foreground">F</span>
-            FibraForge
+            Viashapes
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#servicos" className="hover:text-foreground transition">Serviços</a>
@@ -124,7 +124,7 @@ function Home() {
               Reparamos, cortamos e fabricamos. Da chapa ao carbono, do molde à peça final — entregamos engenharia que se vê e se sente.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow shadow-[0_20px_60px_-20px_oklch(0.72_0.19_45_/_0.6)]">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow shadow-[0_20px_60px_-20px_oklch(0.62_0.20_250_/_0.6)]">
                 <a href="#contacto">Começar projeto <ArrowRight className="ml-2 h-4 w-4" /></a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-border bg-transparent hover:bg-accent">
@@ -263,7 +263,7 @@ function Home() {
             <p className="text-sm uppercase tracking-widest text-primary mb-3">Sobre</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Mãos de oficina, cabeça de engenharia.</h2>
             <p className="text-muted-foreground mb-4">
-              A FibraForge nasceu da paixão pelo automóvel e cresceu como parceira de fabricantes, restauradores e estúdios de design. Trabalhamos pequenas séries e peças únicas com o mesmo rigor.
+              A Viashapes nasceu da paixão pelo automóvel e cresceu como parceira de fabricantes, restauradores e estúdios de design. Trabalhamos pequenas séries e peças únicas com o mesmo rigor.
             </p>
             <ul className="space-y-3 mt-6">
               {[
@@ -297,7 +297,7 @@ function Home() {
           </p>
           <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10">
             {[
-              [Mail, "geral@fibraforge.pt"],
+              [Mail, "geral@viashapes.pt"],
               [Phone, "+351 912 345 678"],
               [MapPin, "Leiria, Portugal"],
             ].map(([Icon, v]: any) => (
@@ -308,14 +308,14 @@ function Home() {
             ))}
           </div>
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow">
-            <a href="mailto:geral@fibraforge.pt">Pedir orçamento <ArrowRight className="ml-2 h-4 w-4" /></a>
+            <a href="mailto:geral@viashapes.pt">Pedir orçamento <ArrowRight className="ml-2 h-4 w-4" /></a>
           </Button>
         </div>
       </section>
 
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-4 text-sm text-muted-foreground">
-          <span>© {new Date().getFullYear()} FibraForge. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Viashapes. Todos os direitos reservados.</span>
           <span>Engenharia em compósitos · Portugal</span>
         </div>
       </footer>
