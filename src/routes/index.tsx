@@ -16,9 +16,9 @@ import portfolio6 from "@/assets/portfolio-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
+      { title: "Viashapes — Fibra de Vidro, Laser, CNC e Auto" },
       { name: "description", content: "Oficina especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel. Peças à medida, acabamento premium." },
-      { property: "og:title", content: "FibraForge — Engenharia em Fibra de Vidro" },
+      { property: "og:title", content: "Viashapes — Engenharia em Fibra de Vidro" },
       { property: "og:description", content: "Peças à medida, reparações invisíveis e produção de precisão." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -35,10 +35,10 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "FibraForge",
+          name: "Viashapes",
           description: "Oficina de fibra de vidro, corte laser, maquinação CNC e reparação automóvel.",
           telephone: "+351 912 345 678",
-          email: "geral@fibraforge.pt",
+          email: "geral@viashapes.pt",
           address: { "@type": "PostalAddress", addressLocality: "Leiria", addressCountry: "PT" },
           areaServed: "PT",
           makesOffer: [
@@ -93,7 +93,7 @@ function Home() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-2 font-display font-bold text-lg">
             <span className="w-8 h-8 rounded-md bg-gradient-to-br from-primary to-ember-glow grid place-items-center text-primary-foreground">F</span>
-            FibraForge
+            Viashapes
           </a>
           <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
             <a href="#servicos" className="hover:text-foreground transition">Serviços</a>
@@ -124,7 +124,7 @@ function Home() {
               Reparamos, cortamos e fabricamos. Da chapa ao carbono, do molde à peça final — entregamos engenharia que se vê e se sente.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow shadow-[0_20px_60px_-20px_oklch(0.72_0.19_45_/_0.6)]">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow shadow-[0_20px_60px_-20px_oklch(0.62_0.20_250_/_0.6)]">
                 <a href="#contacto">Começar projeto <ArrowRight className="ml-2 h-4 w-4" /></a>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-border bg-transparent hover:bg-accent">
@@ -227,14 +227,14 @@ function Home() {
               Uma seleção de trabalhos recentes — do protótipo único à pequena série, com clientes em Portugal, Espanha e França.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[200px] gap-4 md:gap-5">
             {[
-              { img: portfolio1, title: "Capô em fibra de carbono", cat: "Automóvel", span: "md:row-span-2 md:col-span-2 aspect-square md:aspect-auto" },
-              { img: portfolio2, title: "Molde de casco náutico", cat: "Fibra de Vidro", span: "aspect-square" },
-              { img: portfolio3, title: "Painel decorativo laser", cat: "Corte Laser", span: "aspect-square" },
-              { img: portfolio4, title: "Suporte CNC em alumínio", cat: "Maquinação CNC", span: "aspect-square" },
-              { img: portfolio5, title: "Para-choques clássico", cat: "Reparação Auto", span: "aspect-square" },
-              { img: portfolio6, title: "Spoiler personalizado", cat: "Fibra de Vidro", span: "aspect-square md:col-span-2" },
+              { img: portfolio1, title: "Capô em fibra de carbono", cat: "Automóvel", span: "col-span-2 row-span-2" },
+              { img: portfolio2, title: "Molde de casco náutico", cat: "Fibra de Vidro", span: "col-span-2 md:col-span-2 md:row-span-1" },
+              { img: portfolio3, title: "Painel decorativo laser", cat: "Corte Laser", span: "col-span-1 row-span-1" },
+              { img: portfolio4, title: "Suporte CNC em alumínio", cat: "Maquinação CNC", span: "col-span-1 row-span-1" },
+              { img: portfolio5, title: "Para-choques clássico", cat: "Reparação Auto", span: "col-span-2 row-span-2" },
+              { img: portfolio6, title: "Spoiler personalizado", cat: "Fibra de Vidro", span: "col-span-2 row-span-2" },
             ].map((p) => (
               <figure key={p.title} className={`group relative overflow-hidden rounded-2xl border border-border bg-card ${p.span}`}>
                 <img
@@ -243,12 +243,12 @@ function Home() {
                   loading="lazy"
                   width={1024}
                   height={1024}
-                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
-                <figcaption className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-60 group-hover:opacity-95 transition" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-5 translate-y-1 group-hover:translate-y-0 transition">
                   <span className="text-xs uppercase tracking-widest text-primary">{p.cat}</span>
-                  <h3 className="font-display font-semibold text-lg mt-1">{p.title}</h3>
+                  <h3 className="font-display font-semibold text-lg mt-1 text-foreground">{p.title}</h3>
                 </figcaption>
               </figure>
             ))}
@@ -263,7 +263,7 @@ function Home() {
             <p className="text-sm uppercase tracking-widest text-primary mb-3">Sobre</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Mãos de oficina, cabeça de engenharia.</h2>
             <p className="text-muted-foreground mb-4">
-              A FibraForge nasceu da paixão pelo automóvel e cresceu como parceira de fabricantes, restauradores e estúdios de design. Trabalhamos pequenas séries e peças únicas com o mesmo rigor.
+              A Viashapes nasceu da paixão pelo automóvel e cresceu como parceira de fabricantes, restauradores e estúdios de design. Trabalhamos pequenas séries e peças únicas com o mesmo rigor.
             </p>
             <ul className="space-y-3 mt-6">
               {[
@@ -297,7 +297,7 @@ function Home() {
           </p>
           <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto mb-10">
             {[
-              [Mail, "geral@fibraforge.pt"],
+              [Mail, "geral@viashapes.pt"],
               [Phone, "+351 912 345 678"],
               [MapPin, "Leiria, Portugal"],
             ].map(([Icon, v]: any) => (
@@ -308,14 +308,14 @@ function Home() {
             ))}
           </div>
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow">
-            <a href="mailto:geral@fibraforge.pt">Pedir orçamento <ArrowRight className="ml-2 h-4 w-4" /></a>
+            <a href="mailto:geral@viashapes.pt">Pedir orçamento <ArrowRight className="ml-2 h-4 w-4" /></a>
           </Button>
         </div>
       </section>
 
       <footer className="border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-between items-center gap-4 text-sm text-muted-foreground">
-          <span>© {new Date().getFullYear()} FibraForge. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} Viashapes. Todos os direitos reservados.</span>
           <span>Engenharia em compósitos · Portugal</span>
         </div>
       </footer>
