@@ -16,9 +16,9 @@ import portfolio6 from "@/assets/portfolio-6.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "FibraForge — Fibra de Vidro, Laser, CNC e Auto" },
+      { title: "Viashapes — Fibra de Vidro, Laser, CNC e Auto" },
       { name: "description", content: "Oficina especializada em fibra de vidro, corte laser, maquinação CNC e reparação automóvel. Peças à medida, acabamento premium." },
-      { property: "og:title", content: "FibraForge — Engenharia em Fibra de Vidro" },
+      { property: "og:title", content: "Viashapes — Engenharia em Fibra de Vidro" },
       { property: "og:description", content: "Peças à medida, reparações invisíveis e produção de precisão." },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -35,10 +35,10 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "FibraForge",
+          name: "Viashapes",
           description: "Oficina de fibra de vidro, corte laser, maquinação CNC e reparação automóvel.",
           telephone: "+351 912 345 678",
-          email: "geral@fibraforge.pt",
+          email: "geral@viashapes.pt",
           address: { "@type": "PostalAddress", addressLocality: "Leiria", addressCountry: "PT" },
           areaServed: "PT",
           makesOffer: [
