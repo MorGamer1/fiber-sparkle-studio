@@ -227,14 +227,14 @@ function Home() {
               Uma seleção de trabalhos recentes — do protótipo único à pequena série, com clientes em Portugal, Espanha e França.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 auto-rows-[180px] md:auto-rows-[200px] gap-4 md:gap-5">
             {[
-              { img: portfolio1, title: "Capô em fibra de carbono", cat: "Automóvel", span: "md:row-span-2 md:col-span-2 aspect-square md:aspect-auto" },
-              { img: portfolio2, title: "Molde de casco náutico", cat: "Fibra de Vidro", span: "aspect-square" },
-              { img: portfolio3, title: "Painel decorativo laser", cat: "Corte Laser", span: "aspect-square" },
-              { img: portfolio4, title: "Suporte CNC em alumínio", cat: "Maquinação CNC", span: "aspect-square" },
-              { img: portfolio5, title: "Para-choques clássico", cat: "Reparação Auto", span: "aspect-square" },
-              { img: portfolio6, title: "Spoiler personalizado", cat: "Fibra de Vidro", span: "aspect-square md:col-span-2" },
+              { img: portfolio1, title: "Capô em fibra de carbono", cat: "Automóvel", span: "col-span-2 row-span-2" },
+              { img: portfolio2, title: "Molde de casco náutico", cat: "Fibra de Vidro", span: "col-span-2 md:col-span-2 md:row-span-1" },
+              { img: portfolio3, title: "Painel decorativo laser", cat: "Corte Laser", span: "col-span-1 row-span-1" },
+              { img: portfolio4, title: "Suporte CNC em alumínio", cat: "Maquinação CNC", span: "col-span-1 row-span-1" },
+              { img: portfolio5, title: "Para-choques clássico", cat: "Reparação Auto", span: "col-span-2 row-span-2" },
+              { img: portfolio6, title: "Spoiler personalizado", cat: "Fibra de Vidro", span: "col-span-2 row-span-2" },
             ].map((p) => (
               <figure key={p.title} className={`group relative overflow-hidden rounded-2xl border border-border bg-card ${p.span}`}>
                 <img
@@ -243,12 +243,12 @@ function Home() {
                   loading="lazy"
                   width={1024}
                   height={1024}
-                  className="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+                  className="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent opacity-0 group-hover:opacity-100 transition" />
-                <figcaption className="absolute bottom-0 left-0 right-0 p-5 translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition">
+                <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent opacity-60 group-hover:opacity-95 transition" />
+                <figcaption className="absolute bottom-0 left-0 right-0 p-5 translate-y-1 group-hover:translate-y-0 transition">
                   <span className="text-xs uppercase tracking-widest text-primary">{p.cat}</span>
-                  <h3 className="font-display font-semibold text-lg mt-1">{p.title}</h3>
+                  <h3 className="font-display font-semibold text-lg mt-1 text-foreground">{p.title}</h3>
                 </figcaption>
               </figure>
             ))}
