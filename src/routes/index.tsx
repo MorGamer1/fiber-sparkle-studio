@@ -118,10 +118,10 @@ function Home() {
               Oficina &amp; Produção
             </div>
             <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] mb-6">
-              Onde a <span className="text-gradient-ember">fibra</span> ganha forma e a precisão se mede em milésimos.
+              Onde a <span className="text-gradient-ember">fibra</span> ganha forma e a precisão se mede em milimetros.
             </h1>
             <p className="text-lg text-muted-foreground max-w-xl mb-8">
-              Reparamos, cortamos e fabricamos. Da chapa ao carbono, do molde à peça final — entregamos engenharia que se vê e se sente.
+              Reparamos, cortamos e fabricamos. Do molde à peça final — entregamos engenharia que se vê e se sente.
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-ember-glow shadow-[0_20px_60px_-20px_oklch(0.62_0.20_250_/_0.6)]">
@@ -133,9 +133,9 @@ function Home() {
             </div>
             <dl className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-border max-w-md">
               {[
-                ["+15", "Anos de oficina"],
+                ["+40", "Anos de experiência"],
                 ["+800", "Peças entregues"],
-                ["±0.05", "mm de tolerância"],
+                ["100%", "de atenção ao detalhe"],
               ].map(([n, l]) => (
                 <div key={l}>
                   <dt className="text-2xl font-display font-bold text-foreground">{n}</dt>
